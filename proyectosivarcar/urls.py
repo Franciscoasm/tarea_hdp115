@@ -19,7 +19,7 @@ from core import views
 urlpatterns = [
     path('menucliente', views.menucliente, name="menucliente"),
     path('busclarcliente', views.buscarcliente, name="buscarcliente"),
-    path('registrarcliente', views.registrarcliente, name="registrarcliente"),
+    path('', views.registrarcliente, name="registrarcliente"),
     path('devoluciondevehiculo', views.devoluciondevehiculo, name="devoluciondevehiculo"),
     path('login', views.login, name= "login"),
     path('menuadministrador', views.menuadministrador, name = "menuadministrador"),

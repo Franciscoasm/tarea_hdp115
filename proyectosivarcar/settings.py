@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'tarea_hdp',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '33065',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 
