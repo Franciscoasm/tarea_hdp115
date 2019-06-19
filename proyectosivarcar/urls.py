@@ -20,7 +20,8 @@ urlpatterns = [
     path('menucliente', views.menucliente, name="menucliente"),
     path('busclarcliente', views.buscarcliente, name="buscarcliente"),
     path('registrarcliente', views.registrarcliente, name="registrarcliente"),
-    path('', views.devoluciondevehiculo, name="devoluciondevehiculo"),
-    path('', views.login, name= "login"),
+    path('devoluciondevehiculo', views.devoluciondevehiculo, name="devoluciondevehiculo"),
+    path('login', views.login, name= "login"),
+    path('login', views.menuadministrador, name = "menuadministrador"),
     path('admin/', admin.site.urls),
 ]
