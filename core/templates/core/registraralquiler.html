@@ -1,0 +1,195 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+		{% load static %}
+	<title>Alquiler</title>
+	<!-- Meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Heaven Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+	/>
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<!-- Meta tags -->
+	<!--stylesheets-->
+	<link href="{% static 'core/registraralquiler/css/alquiler.css'%}" rel='stylesheet' type='text/css' media="all">
+	<!--//style sheet end here-->
+
+	<link href="{% static 'core/registraralquiler///fonts.googleapis.com/css?family=Barlow:300,400,500,600'%}" rel="stylesheet">
+</head>
+
+<body>
+		<a href="index.html"><img src="{% static 'core/registraralquiler/images/flechaIzquierda.png'%}" width="5%"></a>
+	<h1 class="header-w3ls">
+		Alquiler</h1>
+	<!--login form-->
+	<div class="hotel-bothside">
+		<form action="#" method="post">
+			<div class="mid-cls">
+				<div class="hotel-left-w3ls">
+					<div class="main">
+						<div class="form-order">
+							<button type="submit">Buscar</button>
+						</div>
+					</div><br>
+					<div class="main">
+							<div class="form-right-to-w3l">
+							   <select class="form-control" required disabled>
+								  <option value="">Marca
+								  </option>
+								  <option value="hyundai">Hyundai</option>              
+								  <option value="audi">Audi</option>
+								  <option value="bmw">BMW</option>
+							   </select>
+							</div>
+							<div class="form-right-to-w3l">
+							   <select class="form-control" required disabled>
+								  <option value="">Tipo de vehiculo
+								  </option>
+								  <option value="camioneta">Camioneta</option>
+								  <option value="deportivo">Deportivo</option>
+								  <option value="pickUp">Pick-up</option>
+								  <option value="todoTerreno">Todo Terreno</option>
+							   </select>
+							</div>
+							<div class="form-right-to-w3l">
+							   <select class="form-control" required disabled>
+								  <option value="">Transmicion</option>
+								  <option value="manual">Manual</option>
+								  <option value="automatica">Automatica</option>
+							   </select>
+							</div>
+					</div>
+					<div class="main">
+							<div class="form-left-to-w3l">
+							   <p>Año</p>
+							<input type="text" name="anio" placeholder="2019" required="" disabled>
+							</div>
+							<div class="form-left-to-w3l">
+							   <p>Número de puertas</p>
+							   <input type="text" name="numPuertas" placeholder="4" required="" disabled>
+							</div>
+						 </div>
+						 <div class="main">
+							<div class="form-left-to-w3l">
+							   <p>Modelo</p>
+							   <input type="text" name="modelo" placeholder="Accent" required="" disabled>
+							</div>
+							<div class="form-left-to-w3l">
+							   <p>Color</p>
+							   <input type="text" name="color" placeholder="Rojo" required="" disabled>
+							</div>
+						 </div>
+						 <div class="main">
+							<div class="form-left-to-w3l">
+							   <p>Capacidad de personas</p>
+							   <input type="text" name="capacidadPersona" placeholder="5" required="" disabled>
+							   <div class="clear"></div>
+							</div>
+							<div class="form-left-to-w3l">
+							   <p>Capacidad de maletero (litros)</p>
+							   <input type="text" name="capacidadMaletero" placeholder="5" required="" disabled>
+							   <div class="clear"></div>
+							</div>
+						 </div>
+						 <div class="main">
+							<div class="form-left-to-w3l">
+							   <p>Placa</p>
+							   <input type="text" name="numPlaca" placeholder="P000-000" required="" disabled>
+							   <div class="clear"></div>
+							</div>
+							<div class="form-left-to-w3l">
+							   <p>Tipo de combustible</p>
+							   <select class="form-control buttom" required disabled>
+								  <option value="">Tipo de combustible</option>
+								  <option value="diesel">Diesel</option>
+								  <option value="gasolina">Gasolina</option>
+							   </select>
+							</div>
+						 </div>
+						<div class="form-left-to-w3l">
+							<p>Precio diario ($)</p>
+							<input type="text" name="precioDiario" placeholder="25" required="" disabled>
+							<div class="clear"></div>
+						</div>
+						<div class="form-control-w3l">
+							<p>Funciones</p>
+							<textarea name="funciones" placeholder="Funciones" rows="10" cols="60" required="" disabled></textarea>
+							<div class="clear"></div>
+						</div>
+					<div class="clear"></div>
+
+				</div>
+				<div class="hotel-right-w3ls">
+					<div class="main">
+						<div class="form-order">
+							<button type="submit">Buscar cliente</button>
+							</div>
+					</div><br>
+					<div class="form-left-to-w3l">
+						<p>Nombre</p>
+						<input type="text" name="nombre" placeholder="Juan Manuel" required="">
+						<div class="clear"></div>
+					</div>
+						<div class="form-left-to-w3l">
+						<p>Apellido</p>
+						<input type="text" name="apellido" placeholder="Perez Gonzales" required="">
+						<div class="clear"></div>
+					</div>
+					<div class="form-left-to-w3l">
+						<p>Fecha de nacimiento</p>
+						<input type="date" name="fechaNac" placeholder="" required="">
+						<div class="clear"></div>
+					</div>
+					<div class="form-left-to-w3l">
+						<p>Dirección</p>
+						<input type="text" name="direccion" placeholder="Ciudad universitaria" required="">
+						<div class="clear"></div>
+					</div>
+					<div class="form-left-to-w3l">
+						<p>Teléfono</p>
+						<input type="text" name="telefono" placeholder="22334455" required="">
+						<div class="clear"></div>
+					</div>
+					<div class="main">
+						<div class="form-left-to-w3l">
+							<p>Fecha de alquiler</p>
+							<input type="date" name="fechaAlquiler" placeholder="" required="">
+							<div class="clear"></div>
+						</div>
+						<div class="form-left-to-w3l">
+							<p>Fecha de entrega</p>
+							<input type="date" name="fechaFin" placeholder="" required="">
+							<div class="clear"></div>
+						</div> 
+					</div>  
+					<div class="form-left-to-w3l">
+						<p>Total ($)</p>
+						<input type="text" name="total" placeholder="0" required="" disabled>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+					<div class="btnn">
+						<button type="submit">Realizar Alquiler</button><br>
+						<button type="submit">Ver Seguro</button><br>
+						<button type="submit">Cancelar</button><br>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="copy">
+		<p>&copy;2018 Heaven Booking Form. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a></p>
+	</div>
+</body>
+
+</html>
