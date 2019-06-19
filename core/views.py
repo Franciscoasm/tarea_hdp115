@@ -21,4 +21,7 @@ def menuadministrador(request):
 
 def administraralquiler(request):
 	return render(request, "core/administraralquiler.html")
+
+def administrarvehiculo(request):
+	return render(request, "core/administrarvehiculo.html")
         
