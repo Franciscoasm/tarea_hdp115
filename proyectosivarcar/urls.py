@@ -15,20 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as core_views
+from clienteapp import views as clienteapp_views
 urlpatterns = [
-    path('menucliente', views.menucliente, name="menucliente"),
-    path('busclarcliente', views.buscarcliente, name="buscarcliente"),
-    path('', views.registrarcliente, name="registrarcliente"),
-    path('devoluciondevehiculo', views.devoluciondevehiculo, name="devoluciondevehiculo"),
-    path('login', views.login, name= "login"),
-    path('menuadministrador', views.menuadministrador, name = "menuadministrador"),
-    path('administraralquiler', views.administraralquiler, name= "administraralquiler"),
-    path('administrarvehiculo', views.administrarvehiculo, name = "administrarvehiculo"),
-    path('buscaralquiler', views.buscaralquiler, name= "buscaralquiler"),
-    path('editarvehiculo', views.editarvehiculo, name = "editarvehiculo"),
-    path('registraralquiler', views.registraralquiler, name = "registraralquiler"),
-    path('registrarvehiculo', views.registrarvehiculo, name= "registrarvehiculo"),
-    path('segurooficial', views.segurooficial, name = "segurooficial"),
+    path('menucliente', core_views.menucliente, name="menucliente"),
+    path('buscarcliente', core_views.buscarcliente, name="buscarcliente"),
+    path('', clienteapp_views.registrarcliente, name="registrarcliente"),
+    path('devoluciondevehiculo', core_views.devoluciondevehiculo, name="devoluciondevehiculo"),
+    path('login', core_views.login, name= "login"),
+    path('menuadministrador', core_views.menuadministrador, name = "menuadministrador"),
+    path('administraralquiler', core_views.administraralquiler, name= "administraralquiler"),
+    path('administrarvehiculo', core_views.administrarvehiculo, name = "administrarvehiculo"),
+    path('buscaralquiler', core_views.buscaralquiler, name= "buscaralquiler"),
+    path('editarvehiculo', core_views.editarvehiculo, name = "editarvehiculo"),
+    path('registraralquiler', core_views.registraralquiler, name = "registraralquiler"),
+    path('registrarvehiculo', core_views.registrarvehiculo, name= "registrarvehiculo"),
+    path('segurooficial', core_views.segurooficial, name = "segurooficial"),
     path('admin/', admin.site.urls),
 ]

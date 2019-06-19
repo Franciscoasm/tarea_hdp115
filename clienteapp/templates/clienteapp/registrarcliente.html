@@ -1,0 +1,101 @@
+<!--A Design by W3layouts
+   Author: W3layout
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+        {% load static %}
+    <title>Sivar Car </title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords"
+        content="Gadget Sign Up Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+    <script>
+        addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!-- Meta tags -->
+    <!-- font-awesome icons -->
+    <link href="{% static 'clienteapp/registrarcliente/css/font-awesome.min.css'%}" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!--stylesheets-->
+    <link href="{% static 'clienteapp/registrarcliente/css/registrarCliente.css'%}" rel='stylesheet' type='text/css' media="all">
+    <!--//style sheet end here-->
+    <link href="{% static 'clienteapp/registrarcliente///fonts.googleapis.com/css?family=Montserrat:300,400,500,600'%}" rel="stylesheet">
+    <link href="{% static 'clienteapp/registrarcliente///fonts.googleapis.com/css?family=Open+Sans:400,600,700'%}" rel="stylesheet">
+</head>
+
+<body>
+    <a href=""><img src="{% static 'clienteapp/registrarcliente/images/flechaIzquierda.png'%}" width="5%" height="5%"></a>
+
+    <div style="text-align:center;">
+        <h2 class="error">Registrar cliente</h2>
+    </div>
+    <!---728x90--->
+
+
+    <div class="w3layouts-two-grids">
+        <!---728x90--->
+        <form action="#" method="post">
+            <div class="txt-left-side">
+                <h2> Registrarse </h2>
+
+                <!--Nomre de usuario-->
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-user-o" aria-hidden="true"></span>
+                    <input type="text" name="nombre" placeholder=" Nombre" required="">
+                    <div class="clear"></div>
+                </div>
+                <!--Apellido-->
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-user-o" aria-hidden="true"></span>
+                    <input type="text" name="apellido" placeholder=" Apellido" required="">
+                    <div class="clear"></div>
+                </div>
+                <!--Fecha de nacimiento-->
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-calendar" aria-hidden="true"></span>
+                    <input type="date" name="fechaNacimiento" required="">
+                    <div class="clear"></div>
+                </div>
+                <!--Direccion-->
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-address-book-o" aria-hidden="true"></span>
+                    <input type="text" name="direccion" placeholder="Direccion" required="">
+                    <div class="clear"></div>
+                </div>
+                <!--Telefono-->
+                <div class="form-left-to-w3l">
+                    <span class="fa fa-phone" aria-hidden="true"></span>
+                    <input type="text" name="telefono" placeholder="Telefono" required="">
+                    <div class="clear"></div>
+                </div>
+                <!--IdCliente-->
+                <div class="form-left-to-w3l ">
+                    <span class="fa fa-lock" aria-hidden="true"></span>
+                    <input type="text" name="idCliente" placeholder="Identificador" disabled>
+                    <div class="clear"></div>
+                </div>
+                <!--Bontones-->
+                <div class="form-left-to-w3l ">
+                    <button type="submit" class="btnn">Guardar</button>
+                    <button type="submit" class="btnn">Cancelar </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!---728x90--->
+    <footer class="copyrigh-wthree">
+        <p>
+            <!---728x90 <a href="{% static 'core/registrarclienteoficial/http://www.W3Layouts.com'%}" target="_blank">W3Layouts</a>--->
+        </p>
+    </footer>
+</body>
+
+</html>
