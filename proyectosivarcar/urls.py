@@ -28,5 +28,6 @@ urlpatterns = [
     path('buscaralquiler', views.buscaralquiler, name= "buscaralquiler"),
     path('editarvehiculo', views.editarvehiculo, name = "editarvehiculo"),
     path('registraralquiler', views.registraralquiler, name = "registraralquiler"),
+    path('registrarvehiculo', views.registrarvehiculo, name= "registrarvehiculo"),
     path('admin/', admin.site.urls),
 ]

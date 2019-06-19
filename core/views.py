@@ -34,5 +34,8 @@ def editarvehiculo(request):
 def registraralquiler(request):
 	return render(request, "core/registraralquiler.html")
 
+def registrarvehiculo(request):
+	return render(request, "core/registarvehiculo.html")
+
 
         
