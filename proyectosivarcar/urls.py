@@ -23,5 +23,6 @@ urlpatterns = [
     path('devoluciondevehiculo', views.devoluciondevehiculo, name="devoluciondevehiculo"),
     path('login', views.login, name= "login"),
     path('menuadministrador', views.menuadministrador, name = "menuadministrador"),
+    path('administraralquiler', views.administraralquiler, name= "administraralquiler"),
     path('admin/', admin.site.urls),
 ]
