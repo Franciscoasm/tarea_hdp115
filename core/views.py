@@ -24,4 +24,7 @@ def administraralquiler(request):
 
 def administrarvehiculo(request):
 	return render(request, "core/administrarvehiculo.html")
+
+def buscaralquiler(request):
+	return render(request, "core/buscaralquiler.html")
         
