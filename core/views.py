@@ -30,4 +30,9 @@ def buscaralquiler(request):
 
 def editarvehiculo(request):
 	return render(request, "core/editarvehiculo.html")
+
+def registraralquiler(request):
+	return render(request, "core/registraralquiler.html")
+
+
         
