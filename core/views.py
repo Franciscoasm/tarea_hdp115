@@ -13,6 +13,7 @@ def menucliente(request):
 def devoluciondevehiculo(request):
     return render(request,"core/devoluciondevehiculo.html")
 
-
+def login(request):
+	return render (request, "core/login.html")
 
         
