@@ -1,0 +1,9 @@
+https://www.microsoft.com/en-US/download/details.aspx?id=53339
+https://www.postgresql.org/ftp/odbc/versions/msi/
+
+
+
+
+
+
+alter schema esquema transfer person.adress
