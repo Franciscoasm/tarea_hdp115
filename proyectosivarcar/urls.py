@@ -26,5 +26,6 @@ urlpatterns = [
     path('administraralquiler', views.administraralquiler, name= "administraralquiler"),
     path('administrarvehiculo', views.administrarvehiculo, name = "administrarvehiculo"),
     path('buscaralquiler', views.buscaralquiler, name= "buscaralquiler"),
+    path('editarvehiculo', views.editarvehiculo, name = "editarvehiculo"),
     path('admin/', admin.site.urls),
 ]
