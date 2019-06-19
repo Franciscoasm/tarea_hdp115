@@ -35,7 +35,10 @@ def registraralquiler(request):
 	return render(request, "core/registraralquiler.html")
 
 def registrarvehiculo(request):
-	return render(request, "core/registarvehiculo.html")
+	return render(request, "core/registrarvehiculo.html")
+
+def segurooficial(request):
+	return render(request, "core/segurooficial.html")
 
 
         
