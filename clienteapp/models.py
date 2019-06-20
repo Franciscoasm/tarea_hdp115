@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class cliente(models.Model):
+    ididentificador=models.CharField(max_length=100, null=True, blank=True, unique=True)
     nombrecliente=models.CharField(max_length=30)
     apellidocliente=models.CharField(max_length=30)
     fechanacimiento=models.DateTimeField()
