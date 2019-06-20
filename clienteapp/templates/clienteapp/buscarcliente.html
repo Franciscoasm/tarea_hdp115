@@ -4,6 +4,10 @@
 	<title>
 		Sivar Car
 	</title>
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta charset="UTF-8" />
  <meta name="keywords" content="Item Order Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
@@ -20,18 +24,32 @@
  </script>
 
 <!--Ruta con .css-->
-	    <link href="{% static 'core/buscarcliente/css/style.css'%}" rel='stylesheet' type='text/css' media="all">
+	    <link href="{% static 'clienteapp/buscarcliente/css/style.css'%}" rel='stylesheet' type='text/css' media="all">
 </head>
 
 <body>
 	<!--Agregando imagen-->
-<a href=""><img src="{% static 'core/buscarcliente/images/flecha.png'%}" width="5%" height="5%"></a>
+<a href=""><img src="{% static 'clienteapp/buscarcliente/images/flecha.png'%}" width="5%" height="5%"></a>
 <!--Agregando para el resaltado-->
 <div class="porduct-order-agile">
 
   <div style="text-align:center;">
     <h2 class="error">Buscar Cliente</h2>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!---SEACH--->
  <div style="text-align:center;">
@@ -57,44 +75,20 @@
 			</tr>
 		</thead>
 		<tbody>
+			{% for list_cliente in list_cliente %}
 			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
+				<td>{{list_cliente.id}}</td>
+				<td>{{list_cliente.nombrecliente}}</td>
+				<td>{{list_cliente.apellidocliente}}</td>
+				<td>{{list_cliente.telefono}}</td>
+				<td>{{list_cliente.identificador}}</td>
 			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
+			{% endfor%}
 		</tbody>
 		</div>
 	</table>
+
+	
 </div>
 
 </div>
