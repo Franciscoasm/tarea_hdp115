@@ -17,19 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from core import views as core_views
 from clienteapp import views as clienteapp_views
+from vehiculoapp import views as vehiculoapp_views
 urlpatterns = [
     path('menucliente', core_views.menucliente, name="menucliente"),
-    path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
+    path('', clienteapp_views.buscarcliente, name="buscarcliente"),
     path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
-    path('devoluciondevehiculo', core_views.devoluciondevehiculo, name="devoluciondevehiculo"),
+    path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
     path('login', core_views.login, name= "login"),
     path('menuadministrador', core_views.menuadministrador, name = "menuadministrador"),
     path('administraralquiler', core_views.administraralquiler, name= "administraralquiler"),
-    path('administrarvehiculo', core_views.administrarvehiculo, name = "administrarvehiculo"),
+    path('administrarvehiculo', vehiculoapp_views.administrarvehiculo, name = "administrarvehiculo"),
     path('buscaralquiler', core_views.buscaralquiler, name= "buscaralquiler"),
-    path('editarvehiculo', core_views.editarvehiculo, name = "editarvehiculo"),
+    path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
     path('registraralquiler', core_views.registraralquiler, name = "registraralquiler"),
-    path('registrarvehiculo', core_views.registrarvehiculo, name= "registrarvehiculo"),
+    path('registrarvehiculo', vehiculoapp_views.registrarvehiculo, name= "registrarvehiculo"),
     path('seguro', core_views.seguro, name = "seguro"),
     path('admin/', admin.site.urls),
 ]
