@@ -30,6 +30,6 @@ urlpatterns = [
     path('editarvehiculo', core_views.editarvehiculo, name = "editarvehiculo"),
     path('registraralquiler', core_views.registraralquiler, name = "registraralquiler"),
     path('registrarvehiculo', core_views.registrarvehiculo, name= "registrarvehiculo"),
-    path('segurooficial', core_views.segurooficial, name = "segurooficial"),
+    path('seguro', core_views.seguro, name = "seguro"),
     path('admin/', admin.site.urls),
 ]
