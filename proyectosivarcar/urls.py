@@ -19,8 +19,8 @@ from core import views as core_views
 from clienteapp import views as clienteapp_views
 urlpatterns = [
     path('menucliente', core_views.menucliente, name="menucliente"),
-    path('buscarcliente', core_views.buscarcliente, name="buscarcliente"),
-    path('', clienteapp_views.registrarcliente, name="registrarcliente"),
+    path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
+    path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
     path('devoluciondevehiculo', core_views.devoluciondevehiculo, name="devoluciondevehiculo"),
     path('login', core_views.login, name= "login"),
     path('menuadministrador', core_views.menuadministrador, name = "menuadministrador"),

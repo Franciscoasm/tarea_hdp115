@@ -8,3 +8,9 @@ class cliente(models.Model):
     direccion=models.TextField()
     telefono=models.CharField(max_length=15) 
     identificador=models.CharField(max_length=200) 
+
+    class Meta:
+        ordering=["-fechanacimiento"]
+
+    def __str__(self):
+        return self.nombrecliente
