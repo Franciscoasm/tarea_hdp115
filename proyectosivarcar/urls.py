@@ -24,6 +24,7 @@ urlpatterns = [
     path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
     path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
     path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
+    path('',core_views.menualquiler, name="menualquiler"),
     path('', loginapp_views.login, name= "login"),
     path('menuadministrador', core_views.menuadministrador, name = "menuadministrador"),
     path('administraralquiler', core_views.administraralquiler, name= "administraralquiler"),
