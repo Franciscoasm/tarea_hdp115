@@ -18,7 +18,6 @@ from django.urls import path
 from core import views as core_views
 from clienteapp import views as clienteapp_views
 from vehiculoapp import views as vehiculoapp_views
-from loginapp import views as loginapp_views
 urlpatterns = [
     path('menucliente', clienteapp_views.menucliente, name="menucliente"),
     path('', clienteapp_views.buscarcliente, name="buscarcliente"),
