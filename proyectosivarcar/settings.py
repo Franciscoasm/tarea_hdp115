@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'apps.clienteapp',
     'apps.vehiculoapp',
+    'apps.login',
     
 ]
 
