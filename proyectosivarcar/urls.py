@@ -22,9 +22,9 @@ from loginapp import views as loginapp_views
 urlpatterns = [
     path('menucliente', clienteapp_views.menucliente, name="menucliente"),
     path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
-    path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
+   path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
     path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
-    path('', loginapp_views.login, name= "login"),
+   path('', loginapp_views.login, name= "login"),
     path('menuadministrador', core_views.menuadministrador, name = "menuadministrador"),
     path('administraralquiler', core_views.administraralquiler, name= "administraralquiler"),
     path('administrarvehiculo', vehiculoapp_views.administrarvehiculo, name = "administrarvehiculo"),
