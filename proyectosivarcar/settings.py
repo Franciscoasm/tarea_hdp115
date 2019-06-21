@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'clienteapp',
-    'vehiculoapp',
+    'apps.clienteapp',
+    'apps.vehiculoapp',
     
 ]
 

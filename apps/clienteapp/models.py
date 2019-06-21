@@ -11,7 +11,7 @@ class cliente(models.Model):
     identificador=models.CharField(max_length=200) 
 
     class Meta:
-        ordering=["-fechanacimiento"]
+        ordering=["-ididentificador"]
 
     def __str__(self):
         return self.nombrecliente
