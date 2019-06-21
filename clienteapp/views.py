@@ -8,3 +8,6 @@ def registrarcliente(request):
 def buscarcliente(request):
     list_cliente = cliente.objects.all()
     return render(request,"clienteapp/buscarcliente.html",{'list_cliente':list_cliente})
+
+def menucliente(request):
+    return render(request,"clienteapp/menucliente.html")

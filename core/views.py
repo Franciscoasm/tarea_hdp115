@@ -1,8 +1,6 @@
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
-def menucliente(request):
-    return render(request,"core/menucliente.html")
 
 def login(request):
 	return render (request, "core/login.html")
