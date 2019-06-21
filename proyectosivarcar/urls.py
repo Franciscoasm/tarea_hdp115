@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
-from apps.clienteapp import views as clienteapp_views
-from apps.vehiculoapp import views as vehiculoapp_views
+from clienteapp import views as clienteapp_views
+from vehiculoapp import views as vehiculoapp_views
+from loginapp import views as loginapp_views
 urlpatterns = [
     path('menucliente', clienteapp_views.menucliente, name="menucliente"),
     path('', clienteapp_views.buscarcliente, name="buscarcliente"),
