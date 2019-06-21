@@ -17,5 +17,8 @@ def registraralquiler(request):
 def seguro(request):
 	return render(request, "core/seguro.html")
 
+def menualquiler(request):
+	return render(request, "core/menualquiler.html")
+
 
         
