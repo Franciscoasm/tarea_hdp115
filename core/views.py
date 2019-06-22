@@ -2,9 +2,6 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
-def login(request):
-	return render (request, "core/login.html")
-
 def menuadministrador(request):
 	return render(request, "core/menuadministrador.html")
 
@@ -19,6 +16,9 @@ def registraralquiler(request):
 
 def seguro(request):
 	return render(request, "core/seguro.html")
+
+def menualquiler(request):
+	return render(request, "core/menualquiler.html")
 
 
         

@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 class Transmicion(models.Model):
 	tipo_Transmicion = models.CharField(max_length = 15)
 
@@ -49,6 +50,13 @@ class Vehiculo(models.Model):
 	tipo_Vehiculo = models.OneToOneField(Tipo_Vehiculo, on_delete = models.CASCADE)
 	tipo_Combustible = models.OneToOneField(Tipo_Combustible, on_delete = models.CASCADE)
 	tipo_Transmicion = models.OneToOneField(Transmicion, on_delete = models.CASCADE)
+=======
+class Vehiculo(models.Model):
+	marca_Vehiculo = models.CharField(max_length=30)
+	tipo_Vehiculo = models.CharField(max_length=30)
+	tipo_Combustible = models.CharField(max_length=30)
+	tipo_Transmicion = models.CharField(max_length=30)
+>>>>>>> 031bb23e026072c96f88c3053134c68d9ddf777b
 	numero_puertas = models.IntegerField()
 	capacidad_personas = models.IntegerField()
 	color = models.CharField(max_length = 20)
@@ -56,8 +64,14 @@ class Vehiculo(models.Model):
 	funciones = models.TextField()
 	capacidad_maletero = models.IntegerField()
 	anio = models.IntegerField()
+<<<<<<< HEAD
 	estado = models.OneToOneField(Estado_Vehiculo, null = True, blank = True, on_delete = models.CASCADE)
 	modelo_Vehiculo = models.OneToOneField(Modelo_Vehiculo, on_delete = models.CASCADE)
 	precio = models.DecimalField(max_digits = 5, decimal_places = 2)
 
+=======
+	estado = models.CharField(max_length=30)
+	modelo_Vehiculo = models.CharField(max_length=30)
+	precio = models.CharField(max_length=30)
+>>>>>>> 031bb23e026072c96f88c3053134c68d9ddf777b
 
