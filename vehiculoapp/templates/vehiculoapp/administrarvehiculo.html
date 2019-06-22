@@ -39,7 +39,7 @@
  <div style="text-align:center;">
 <form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search" name = "q" id = "buscador">
                    
                 </div>
             </form>        
@@ -62,6 +62,7 @@
 
 <br>
 </br>
+
 	<table>
 
 		<thead>
@@ -74,8 +75,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				{% for list_vehiculo in list_vehiculo %}
+				{% if object_list %}
+				{% for list_vehiculo in object_list %}
 			<tr>
 				<td>{{list_vehiculo.marca_Vehiculo}}</td>
 				<td>{{list_vehiculo.tipo_Vehiculo}}</td>
@@ -83,7 +84,13 @@
 				<td>{{list_vehiculo.color}}</td>
 				<td>{{list_vehiculo.estado}}</td>
 			</tr>
-			{% endfor%}
+
+				{% endfor%}
+
+				{% else %}
+					<h2 class="error">No hay registros de vehiculos</h2>
+				
+				{% endif %}
 		</tbody>
 		</div>
 	</table>

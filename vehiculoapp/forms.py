@@ -20,6 +20,7 @@ class IngresarVehiculoForm(forms.ModelForm):
 			'tipo_Combustible',
 			'precio',
 			'funciones',
+			'estado',
 		]
 		labels = {#dicicionario
 			'marca_Vehiculo': 'Marca',
@@ -35,9 +36,10 @@ class IngresarVehiculoForm(forms.ModelForm):
 			'tipo_Combustible': 'Tipo de combustible',
 			'precio': 'Precio diario',
 			'funciones': 'Funciones',
+			'estado': 'Estado del vehiculo',
 		}
 		widgets = {
-			'marca_Vehiculo': forms.Select(attrs={'class':'form-control buttom'}),
+			'marca_Vehiculo': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'tipo_Vehiculo': forms.Select(attrs={'class':'form-control buttom'}),
 			'tipo_Transmicion': forms.Select(attrs={'class':'form-control buttom'}),
 			'anio': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
@@ -48,6 +50,7 @@ class IngresarVehiculoForm(forms.ModelForm):
 			'capacidad_maletero': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'placa': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'tipo_Combustible': forms.Select(attrs={'class':'form-control buttom'}),
-			'precio': forms.TextInput(attrs={'class':'form-group'}),
+			'precio': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'funciones': forms.Textarea(attrs={'class':'form-group'}),
+			'estado': forms.Select(attrs={'class':'form-control buttom'}),
 		}

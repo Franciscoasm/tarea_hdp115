@@ -1,122 +1,135 @@
-<!DOCTYPE HTML>
-<html lang="es">
-   <head>
-         {% load static %}
-      <title>Registrar Vehiculo</title>
-      <!-- Meta tag Keywords -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta charset="UTF-8" />
-      <meta name="keywords" content="Item Order Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
-         />
-      <script>
-         addEventListener("load", function () {
-         	setTimeout(hideURLbar, 0);
-         }, false);
-         
-         function hideURLbar() {
-         	window.scrollTo(0, 1);
-         }
-      </script>
-      <!-- Meta tag Keywords -->
-      <!-- css files -->
-      <link rel="stylesheet" href="{% static 'vehiculoapp/registrarvehiculo/css/registrarVehiculo.css'%}" type="text/css" media="all" />
-      <!-- Style-CSS -->
-      <!-- Font-Awesome-Icons-CSS -->
-      <!-- //css files -->
-      <!-- web-fonts -->
-      <link href="{% static 'vehiculoapp/registrarvehiculo/css///fonts.googleapis.com/css?family=Ubuntu:400,500'%}" rel="stylesheet">
-      <!-- //web-fonts -->
-   </head>
-   <body>
-      <div>
-         <a href="index.html"><img src="{% static 'vehiculoapp/registrarvehiculo/css/images/flechaIzquierda.png'%}" width="5%" height="5%"></a>
-      </div>
-      <!-- title -->
-      <h1 class="header-w3ls">Registrar Vehiculo</h1>
-      <!-- //title -->
-      <!-- content -->
-      <div class="porduct-order-agile">
-         <form method="POST"> 
-            <div class="order-list">
-            {% csrf_token %}
-            
-                  <p>Ingresar nuevo vehiculo</p>
-                  <div class="main">
-                     <div class="form-order">
-                        {{form.marca_Vehiculo}}
-                     </div>
-                     <div class="form-order">
-                        {{form.tipo_Vehiculo}}
-                     </div>
-                     <div class="form-order">
-                        {{form.tipo_Transmicion}}
-                     </div>
-                  </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Año</p>
-                  {{form.anio}}
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Número de puertas</p>
-                     {{form.numero_puertas}}
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Modelo</p>
-                     {{form.modelo_Vehiculo}}
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Color</p>
-                     {{form.color}}
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Capacidad de personas</p>
-                     {{form.capacidad_personas}}
-                     <div class="clear"></div>
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Capacidad de maletero (litros)</p>
-                     {{form.capacidad_maletero}}
-                     <div class="clear"></div>
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Placa</p>
-                     {{form.placa}}
-                     <div class="clear"></div>
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Tipo de combustible</p>
-                     {{form.tipo_Combustible}}
-                  </div>
-               </div>
-               <div class="form-group">
-                     <p>Precio diario ($)</p>
-                     {{form.precio}}
-                     <div class="clear"></div>
-               </div>
-               <div class="form-group">
-                     <p>Funciones</p>
-                     {{form.funciones}}
-                     <div class="clear"></div>
-               </div>
-            
+      <!DOCTYPE HTML>
+      <html lang="es">
+         <head>
+               {% load static %}
+            <title>Registrar Vehiculo</title>
+            <!-- Meta tag Keywords -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="UTF-8" />
+            <meta name="keywords" content="Item Order Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+               />
+            <script>
+               addEventListener("load", function () {
+               	setTimeout(hideURLbar, 0);
+               }, false);
+               
+               function hideURLbar() {
+               	window.scrollTo(0, 1);
+               }
+            </script>
+            <!-- Meta tag Keywords -->
+            <!-- css files -->
+            <link rel="stylesheet" href="{% static 'vehiculoapp/registrarvehiculo/css/registrarVehiculo.css'%}" type="text/css" media="all" />
+            <!-- Style-CSS -->
+            <!-- Font-Awesome-Icons-CSS -->
+            <!-- //css files -->
+            <!-- web-fonts -->
+            <link href="{% static 'vehiculoapp/registrarvehiculo/css///fonts.googleapis.com/css?family=Ubuntu:400,500'%}" rel="stylesheet">
+            <!-- //web-fonts -->
+         </head>
+         <body>
+            <div>
+               <a href="index.html"><img src="{% static 'vehiculoapp/registrarvehiculo/css/images/flechaIzquierda.png'%}" width="5%" height="5%"></a>
             </div>
-            
-            <button type="submit" class="btn btn-primary">Guardar</button>
-            <button type="submit" class="btn btn-primary">Cancelar</button>
-         </form>
-      </div>
-      <!-- copyright -->
-      <div class="copy">
-         <p>&copy; SivarCar
-         </p>
-      </div>
-      <!-- //copyright -->
-   </body>
-</html>
+            <!-- title -->
+            <h1 class="header-w3ls">Registrar Vehiculo</h1>
+            <!-- //title -->
+            <!-- content -->
+            <div class="porduct-order-agile"> <!--Inicio del div class = product-order-agile-->
+               <form method="post">  <!--Inicio del formulario-->
+                  <div class="order-list"> <!--Inicio del div class = order-list-->
+                  {% csrf_token %}
+
+                     <div class="main">
+                        <div class="form-order">
+                           <p>Tipo de vehiculo</p>
+                           {{form.tipo_Vehiculo}} <!--Tipo de vehiculo-->
+                        </div>
+                        <div class="form-order">
+                           <p>Tipo de transmicion</p>
+                           {{form.tipo_Transmicion}} <!--Tipo de transimicion-->
+                        </div>
+                        <div class="form-order">
+                           <p>Estado</p>
+                           {{form.estado}} <!--Estado del vehiculo-->
+                        </div>
+                     </div>
+
+                     <div class="main">
+                        <div class="form-left-to-w3l">
+                           <p>Marca</p>
+                           {{form.marca_Vehiculo}} <!--Marca de vehiculo-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <p>Año</p> 
+                           {{form.anio}} <!--Año de vehiculo-->
+                        </div>
+                     </div>
+
+                     <div class="main">
+                        <div class="form-left-to-w3l">
+                           <p>Número de puertas</p>
+                           {{form.numero_puertas}} <!--Numero de puertas-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <p>Modelo</p>
+                           {{form.modelo_Vehiculo}} <!--Modelo de vehiculo-->
+                        </div>
+                     </div>
+
+                     <div class="main">
+                        <div class="form-left-to-w3l">
+                           <p>Color</p>
+                           {{form.color}} <!--Color del vehiculo-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <p>Capacidad de personas</p>
+                           {{form.capacidad_personas}} <!--Capacidad de personas-->
+                           <div class="clear"></div>
+                        </div>
+                     </div>
+
+                     <div class="main">
+                        <div class="form-left-to-w3l">
+                           <p>Capacidad de maletero (litros)</p>
+                           {{form.capacidad_maletero}} <!--Capacidad del maletero-->
+                           <div class="clear"></div>
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <p>Placa</p>
+                           {{form.placa}} <!--Numero de placa-->
+                           <div class="clear"></div>
+                        </div>
+                     </div>
+
+                     <div class="main">
+                        <div class="form-left-to-w3l">
+                           <p>Tipo de combustible</p>
+                           {{form.tipo_Combustible}} <!--Tipo de combustible-->
+                        </div>
+                        <div class="form-left-to-w3l">
+                           <p>Precio diario ($)</p>
+                           {{form.precio}} <!--Precio diario del alquiler-->
+                           <div class="clear"></div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <p>Funciones</p>
+                        {{form.funciones}} <!--Funciones del vehiculo-->
+                        <div class="clear"></div>
+                     </div>
+                  
+                  </div> <!--Fin del div class = order-list-->
+                  <!--Botones-->
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  <button type="submit" class="btn btn-primary">Cancelar</button>
+               </form> <!--Fin del formulario-->
+            </div> <!--Fin del div class = product-order-agile-->
+            <!-- copyright -->
+            <div class="copy">
+               <p>&copy; SivarCar
+               </p>
+            </div>
+            <!-- //copyright -->
+         </body>
+      </html>

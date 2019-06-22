@@ -35,84 +35,74 @@
       <h1 class="header-w3ls">Editar/Eliminar Vehiculo</h1>
       <!-- //title -->
       <!-- content -->
-      <div class="porduct-order-agile">
-         <form method="post">
-            <div class="order-list">
+      <div class="porduct-order-agile"> <!--Inicio del div class = product-order-agile-->
+               <form method="post">  <!--Inicio del formulario-->
+                  <div class="order-list"> <!--Inicio del div class = order-list-->
                   {% csrf_token %}
-            
-                  <p>Ingresar nuevo vehiculo</p>
-                  <div class="main">
-                     <div class="form-order">
-                        {{form.marca_Vehiculo}}
-                     </div>
-                     <div class="form-order">
-                        {{form.tipo_Vehiculo}}
-                     </div>
-                     <div class="form-order">
-                        {{form.tipo_Transmicion}}
-                     </div>
-                  </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Año</p>
-                  {{form.anio}}
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Número de puertas</p>
-                     {{form.numero_puertas}}
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Modelo</p>
-                     {{form.modelo_Vehiculo}}
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Color</p>
-                     {{form.color}}
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Capacidad de personas</p>
-                     {{form.capacidad_personas}}
-                     <div class="clear"></div>
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Capacidad de maletero (litros)</p>
-                     {{form.capacidad_maletero}}
-                     <div class="clear"></div>
-                  </div>
-               </div>
-               <div class="main">
-                  <div class="form-left-to-w3l">
-                     <p>Placa</p>
-                     {{form.placa}}
-                     <div class="clear"></div>
-                  </div>
-                  <div class="form-left-to-w3l">
-                     <p>Tipo de combustible</p>
-                     {{form.tipo_Combustible}}
-                  </div>
-               </div>
-               <div class="form-group">
-                     <p>Precio diario ($)</p>
-                     {{form.precio}}
-                     <div class="clear"></div>
-               </div>
-               <div class="form-group">
-                     <p>Funciones</p>
-                     {{form.funciones}}
-                     <div class="clear"></div>
-               </div>
-            
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Guardar</button>
-            <button type="submit" class="btn btn-primary">Eliminar</button>
-            <button type="submit" class="btn btn-primary">Cancelar</button>
-         </form>
-      </div>
+                     <table>
+                        <tr>
+                           <td>Tipo de vehiculo:</td>
+                           <td>{{object.tipo_Vehiculo}} <!--Tipo de vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Tipo de transmiciono:</td>
+                           <td>{{object.tipo_Transmicion}} <!--Tipo de transimicion--></td>
+                        </tr>
+                        <tr>
+                           <td>Estado:</td>
+                           <td>{{object.estado}} <!--Estado del vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Marca:</td>
+                           <td>{{object.marca_Vehiculo}} <!--Marca de vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Año:</td>
+                           <td>{{object.anio}} <!--Año de vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Número de puertas:</td>
+                           <td>{{object.numero_puertas}} <!--Numero de puertas--></td>
+                        </tr>
+                        <tr>
+                           <td>Modelo:</td>
+                           <td>{{object.modelo_Vehiculo}} <!--Modelo de vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Color:</td>
+                           <td>{{object.color}} <!--Color del vehiculo--></td>
+                        </tr>
+                        <tr>
+                           <td>Capacidad de personas:</td>
+                           <td>{{object.capacidad_personas}} <!--Capacidad de personas--></td>
+                        </tr>
+                        <tr>
+                           <td>Capacidad de maletero (litros):</td>
+                           <td>{{object.capacidad_maletero}} <!--Capacidad del maletero--></td>
+                        </tr>
+                        <tr>
+                           <td>Placa:</td>
+                           <td>{{object.placa}} <!--Numero de placa--></td>
+                        </tr>
+                        <tr>
+                           <td>Tipo de combustible:</td>
+                           <td>{{object.tipo_Combustible}} <!--Tipo de combustible--></td>
+                        </tr>
+                        <tr>
+                           <td>Precio diario ($):</td>
+                           <td>{{object.precio}} <!--Precio diario del alquiler--></td>
+                        </tr>
+                        <tr>
+                           <td>Funciones:</td>
+                           <td>{{object.funciones}} <!--Funciones del vehiculo--></td>
+                        </tr>
+                     </table>
+                  </div> <!--Fin del div class = order-list-->
+                  <!--Botones-->
+                  <button type="submit" class="btn btn-primary">Eliminar</button>
+                  <button type="submit" class="btn btn-primary">Cancelar</button>
+               </form> <!--Fin del formulario-->
+            </div> <!--Fin del div class = product-order-agile-->
       <!-- copyright -->
       <div class="copy">
          <p>&copy; SivarCar

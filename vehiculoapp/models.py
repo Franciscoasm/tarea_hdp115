@@ -16,13 +16,6 @@ class Tipo_Vehiculo(models.Model):
 		return '{}'.format(self.tipo_Vehiculo)
 
 
-class Marca_Vehiculo(models.Model):
-	marca_Vehiculo = models.CharField(max_length = 50)
-
-	def __str__(self):
-		return '{}'.format(self.marca_Vehiculo)
-
-
 class Tipo_Combustible(models.Model):
 	tipo_Combustible = models.CharField(max_length = 20)
 
@@ -31,17 +24,17 @@ class Tipo_Combustible(models.Model):
 
 
 class Estado_Vehiculo(models.Model):
-	estado = models.CharField(max_length = 20, null = True, blank = True)
+	estado = models.CharField(max_length = 20)
 
 	def __str__(self):
 		return '{}'.format(self.estado)
 
 
 class Vehiculo(models.Model):
-	marca_Vehiculo = models.OneToOneField(Marca_Vehiculo, on_delete = models.CASCADE)
-	tipo_Vehiculo = models.OneToOneField(Tipo_Vehiculo, on_delete = models.CASCADE)
-	tipo_Combustible = models.OneToOneField(Tipo_Combustible, on_delete = models.CASCADE)
-	tipo_Transmicion = models.OneToOneField(Transmicion, on_delete = models.CASCADE)
+	marca_Vehiculo = models.CharField(max_length = 20)
+	tipo_Vehiculo = models.ForeignKey(Tipo_Vehiculo, on_delete = models.CASCADE)
+	tipo_Combustible = models.ForeignKey(Tipo_Combustible, on_delete = models.CASCADE)
+	tipo_Transmicion = models.ForeignKey(Transmicion, on_delete = models.CASCADE)
 	numero_puertas = models.IntegerField()
 	capacidad_personas = models.IntegerField()
 	color = models.CharField(max_length = 20)
@@ -49,6 +42,6 @@ class Vehiculo(models.Model):
 	funciones = models.TextField()
 	capacidad_maletero = models.IntegerField()
 	anio = models.IntegerField()
-	estado = models.OneToOneField(Estado_Vehiculo, null = True, blank = True, on_delete = models.CASCADE)
+	estado = models.ForeignKey(Estado_Vehiculo, on_delete = models.CASCADE)
 	modelo_Vehiculo = models.CharField(max_length = 20)
 	precio = models.DecimalField(max_digits = 5, decimal_places = 2)

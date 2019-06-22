@@ -1,10 +1,8 @@
 from django.conf.urls import url, include
+from django.urls import path
 
-from vehiculoapp.views import *
+from vehiculoapp.views import VehiculoList
 
 urlpatterns = [
-	path('editarvehiculo', vehiculoapp_views.editarvehiculo, name= "editarvehiculo"),
-    path('registrarvehiculo', vehiculoapp_views.registrarvehiculo, name= "registrarvehiculo"),
-    path('ingresarVehiculoViews', vehiculoapp_views.ingresarVehiculoViews, name= "ingresarVehiculoViews"),
-    path('', vehiculoapp_views.editarVehiculoViews, name= "editarVehiculoViews"),
+    url(r'^administrarVehiculo$', VehiculoList.as_view(), name = "vehiculoList"),
 ]
