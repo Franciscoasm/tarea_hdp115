@@ -28,6 +28,7 @@
 </head>
 
 <body>
+
 	<!--Agregando imagen-->
 <a href=""><img src="{% static 'clienteapp/buscarcliente/images/flecha.png'%}" width="3%" height="5%"></a>
 <!--Agregando para el resaltado-->
@@ -38,7 +39,6 @@
 </div>
 
 
-<!---SEACH--->
  <div style="text-align:center;">
 <form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s">
                 <div class="form-group">
@@ -49,9 +49,9 @@
    </div>
 
 <div class="container">
-
+<div id="cuadro">
 	<table border="1" style="margin: 0 auto;">
-		<div style="text-align:center;">
+		
 		<thead>
 			<tr>
 				<th>Id</th>
@@ -72,9 +72,9 @@
 			</tr>
 			{% endfor%}
 		</tbody>
-		</div>
+		
 	</table>
-
+</div>
 	
 </div>
 
