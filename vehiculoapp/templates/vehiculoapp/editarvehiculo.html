@@ -36,91 +36,73 @@
       <!-- //title -->
       <!-- content -->
       <div class="porduct-order-agile">
-         <form action="#" method="post">
+         <form method="post">
             <div class="order-list">
+                  {% csrf_token %}
+            
                   <p>Ingresar nuevo vehiculo</p>
                   <div class="main">
                      <div class="form-order">
-                        <select class="form-control buttom" required>
-                           <option value="">Marca
-                           </option>
-                           <option value="hyundai">Hyundai</option>                              <option value="audi">Audi</option>
-                           <option value="bmw">BMW</option>
-                        </select>
+                        {{form.marca_Vehiculo}}
                      </div>
                      <div class="form-order">
-                        <select class="form-control buttom" required>
-                           <option value="">Tipo de vehiculo
-                           </option>
-                           <option value="camioneta">Camioneta</option>
-                           <option value="deportivo">Deportivo</option>
-                           <option value="pickUp">Pick-up</option>
-                           <option value="todoTerreno">Todo Terreno</option>
-                        </select>
+                        {{form.tipo_Vehiculo}}
                      </div>
                      <div class="form-order">
-                        <select class="form-control buttom" required>
-                           <option value="">Transmicion</option>
-                           <option value="manual">Manual</option>
-                           <option value="automatica">Automatica</option>
-                        </select>
+                        {{form.tipo_Transmicion}}
                      </div>
                   </div>
                <div class="main">
                   <div class="form-left-to-w3l">
                      <p>Año</p>
-                  <input type="text" name="anio" placeholder="2019" required="">
+                  {{form.anio}}
                   </div>
                   <div class="form-left-to-w3l">
                      <p>Número de puertas</p>
-                     <input type="text" name="numPuertas" placeholder="4" required="">
+                     {{form.numero_puertas}}
                   </div>
                </div>
                <div class="main">
                   <div class="form-left-to-w3l">
                      <p>Modelo</p>
-                     <input type="text" name="modelo" placeholder="Accent" required="">
+                     {{form.modelo_Vehiculo}}
                   </div>
                   <div class="form-left-to-w3l">
                      <p>Color</p>
-                     <input type="text" name="color" placeholder="Rojo" required="">
+                     {{form.color}}
                   </div>
                </div>
                <div class="main">
                   <div class="form-left-to-w3l">
                      <p>Capacidad de personas</p>
-                     <input type="text" name="capacidadPersona" placeholder="5" required="">
+                     {{form.capacidad_personas}}
                      <div class="clear"></div>
                   </div>
                   <div class="form-left-to-w3l">
                      <p>Capacidad de maletero (litros)</p>
-                     <input type="text" name="capacidadMaletero" placeholder="5" required="">
+                     {{form.capacidad_maletero}}
                      <div class="clear"></div>
                   </div>
                </div>
                <div class="main">
                   <div class="form-left-to-w3l">
                      <p>Placa</p>
-                     <input type="text" name="numPlaca" placeholder="P000-000" required="">
+                     {{form.placa}}
                      <div class="clear"></div>
                   </div>
                   <div class="form-left-to-w3l">
                      <p>Tipo de combustible</p>
-                     <select class="form-control buttom" required>
-                        <option value="">Tipo de combustible</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="gasolina">Gasolina</option>
-                     </select>
+                     {{form.tipo_Combustible}}
                   </div>
                </div>
                <div class="form-group">
                      <p>Precio diario ($)</p>
-                     <input type="text" name="precioDiario" placeholder="25" required="">
+                     {{form.precio}}
                      <div class="clear"></div>
                </div>
                <div class="form-group">
                      <p>Funciones</p>
-                     <textarea name="funciones" placeholder="Funciones" rows="10" cols="60" required=""></textarea>
+                     {{form.funciones}}
                      <div class="clear"></div>
                </div>
             

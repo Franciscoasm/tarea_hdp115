@@ -75,40 +75,15 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
+				{% for list_vehiculo in list_vehiculo %}
 			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
+				<td>{{list_vehiculo.marca_Vehiculo}}</td>
+				<td>{{list_vehiculo.tipo_Vehiculo}}</td>
+				<td>{{list_vehiculo.modelo_Vehiculo}}</td>
+				<td>{{list_vehiculo.color}}</td>
+				<td>{{list_vehiculo.estado}}</td>
 			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
-			<tr>
-				<td>Cell 1</td>
-				<td>Cell 2</td>
-				<td>Cell 3</td>
-				<td>Cell 4</td>
-				<td>Cell 5</td>
-			</tr>
+			{% endfor%}
 		</tbody>
 		</div>
 	</table>
