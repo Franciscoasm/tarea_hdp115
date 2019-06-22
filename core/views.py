@@ -5,8 +5,6 @@ from django.shortcuts import render, HttpResponse
 def menuadministrador(request):
 	return render(request, "core/menuadministrador.html")
 
-def administraralquiler(request):
-	return render(request, "core/administraralquiler.html")
 
 def buscaralquiler(request):
 	return render(request, "core/buscaralquiler.html")
