@@ -32,28 +32,10 @@
 	<div class="porduct-order-agile">
 
 		<div style="text-align:center;">
-			<h2 class="error">Buscar Alquiler</h2>
+			<h2 class="error">Resultado de Busqueda Alquiler</h2>
 		</div>
 
-		<div style="text-align:center;">
-
-
-
-
-			<form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s" method="post" action="resultadoBusquedaAlquiler">
-				{% csrf_token %}
-				<div class="form-group">
-					<input type="text" class="form-control" name="buscalo" placeholder="Buscar">
-					<button type="submit" class="btn submit">Buscar
-					</button> </a>
-				</div>
-			</form> 
-
-
-
-
-
-			
+		<div style="text-align:center;">       
 		</div>
 
 		<div class="container">
@@ -70,12 +52,19 @@
 						</tr>
 					</thead>
 					<tbody>
+						{% if alquilerbusq  %}
+						{% for alquilerbusq  in alquilerbusq  %}
 						<tr>
-							<td>Cell 1</td>
-							<td>Cell 2</td>
-							<td>Cell 3</td>
-							<td>Cell 4</td>
+							<td>{{alquilerbusq.id_cliente.nombre_cliente}}</td>
+							<td>{{alquilerbusq.id_vehiculo.marca_Vehiculo}}</td>
+							<td>{{alquilerbusq.id_vehiculo.placa}}</td>
+							<td>{{alquilerbusq.fecha_devolucion}}</td>
 						</tr>
+							{% endfor %}
+							{% else %}
+							<h2 class="error">¡No hay registros de alquileres!</h2>
+
+							{% endif %}
 					</tbody>
 				</div>
 			</table>

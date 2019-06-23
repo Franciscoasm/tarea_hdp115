@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
+from django.views.generic import TemplateView
 
 from .models import Alquiler, Cliente, Vehiculo
 from vehiculoapp.views import VehiculoEditar
@@ -16,6 +17,7 @@ def menuAdministrador(request):
 
 def buscarAlquiler(request):
 	return render(request, "core/buscaralquiler.html")
+
 
 def registrarAlquiler(request):
 	return render(request, "core/registraralquiler.html")
@@ -58,3 +60,15 @@ class VehiculoEditar(UpdateView):
 	form_class = IngresarVehiculoForm
 	template_name = 'core/registraralquiler.html'
 	success_url = reverse_lazy('alquiler:buscarAlquiler')
+
+
+class AlquilerBusq(TemplateView):
+	model = Alquiler
+#	template_name = 'core/resultadobuscaralquiler.html'
+	def post(self, request, *args, **kwargs):
+		buscar= request.POST['buscalo']
+		alquilerbusq = Alquiler.objects.filter(id__contains = buscar)
+		print(alquilerbusq)
+		return render(request, 'core/resultadobuscaralquiler.html', {'alquilerbusq':alquilerbusq})
+
+
