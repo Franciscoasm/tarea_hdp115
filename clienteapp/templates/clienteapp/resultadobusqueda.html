@@ -1,0 +1,84 @@
+<html>
+<head>
+	{% load static %}
+	<title>
+		Sivar Car
+	</title>
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Item Order Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+	addEventListener("load", function () {
+		setTimeout(hideURLbar, 0);
+	}, false);
+
+	function hideURLbar() {
+		window.
+		(0, 1);
+	}
+	</script>
+
+	<!--Ruta con .css-->
+	<link href="{% static 'clienteapp/buscarcliente/css/style.css'%}" rel='stylesheet' type='text/css' media="all">
+</head>
+
+<body>
+
+	<!--Agregando imagen-->
+	<a href="registraralquiler"><img src="{% static 'clienteapp/buscarcliente/images/flecha.png'%}" width="3%" height="5%"></a>
+	<!--Agregando para el resaltado-->
+	<div class="porduct-order-agile">
+
+		<div style="text-align:center;">
+			<h2 class="error">Resultado de busqueda</h2>
+		</div>
+
+
+		<div style="text-align:center;">
+
+
+			<div class="container">
+				<div id="cuadro">
+					<table border="1" style="margin: 0 auto;">
+
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Numero de Telefono</th>
+								<th>Numero de Dui</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% if clientesbusq %}
+						{% for clientesbusq in clientesbusq %}
+						<tr>
+							<td>{{clientesbusq.pk}}</td>
+							<td>{{clientesbusq.nombre_cliente}}</td>
+							<td>{{clientesbusq.apellido_cliente}}</td>
+							<td>{{clientesbusq.telefono}}</td>
+							<td>{{clientesbusq.dui}}</td>
+						</tr>
+							{% endfor %}
+							{% else %}
+							<h2 class="error">¡No hay registros de clientes!</h2>
+
+							{% endif %}
+
+						</tbody>
+
+					</table>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+
+	</html>

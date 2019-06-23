@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 from .models import Cliente
 
@@ -18,6 +19,25 @@ def menuCliente(request):
 class ClienteList(ListView):
 	model = Cliente
 	template_name = 'clienteapp/buscarcliente.html'
+
+
+
+class ClienteBusq(TemplateView):
+	model = Cliente
+
+	def post(self, request, *args, **kwargs):
+		buscar= request.POST['buscalo']
+		clientesbusq = Cliente.objects.filter(nombre_cliente__contains = buscar)
+		print(clientesbusq)
+		return render(request, 'clienteapp/resultadobusqueda.html', {'clientesbusq':clientesbusq})
+
+
+
+
+
+
+
+
 
 class ClienteCrear(CreateView):
 	"""docstring for VehiculoCrear"""
