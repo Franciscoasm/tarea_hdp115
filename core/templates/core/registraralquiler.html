@@ -18,6 +18,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script type="application/x-javascript">
 		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
 	</script>
+	<script type="text/javascript">
+            function confCancel(){
+               var respuesta = confirm("Estas seguro que deseas Cancelar?");
+               if (respuesta == true){
+                  return true;
+               }
+               else{
+                  return false;
+               }
+            </script>
 	<!-- Meta tags -->
 	<!--stylesheets-->
 	<link href="{% static 'core/registraralquiler/css/alquiler.css'%}" rel='stylesheet' type='text/css' media="all">
@@ -180,7 +190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="btnn">
 						<button type="submit">Realizar Alquiler</button><br>
 						<button type="submit">Ver Seguro</button><br>
-						<button type="submit">Cancelar</button><br>
+						<button type="submit" onClick = 'return confCancel()'>Cancelar</button><br>
 					</div>
 				</div>
 			</div>

@@ -17,6 +17,16 @@
                	window.scrollTo(0, 1);
                }
             </script>
+            <script type="text/javascript">
+            function confCancel(){
+               var respuesta = confirm("Estas seguro que deseas Cancelar?");
+               if (respuesta == true){
+                  return true;
+               }
+               else{
+                  return false;
+               }
+            </script>
             <!-- Meta tag Keywords -->
             <!-- css files -->
             <link rel="stylesheet" href="{% static 'vehiculoapp/registrarvehiculo/css/registrarVehiculo.css'%}" type="text/css" media="all" />
@@ -122,7 +132,7 @@
                   </div> <!--Fin del div class = order-list-->
                   <!--Botones-->
                   <button type="submit" class="btn btn-primary">Guardar</button>
-                  <button type="submit" class="btn btn-primary">Cancelar</button>
+                  <button type="submit" class="btnn" onClick = 'return confCancel()'>Cancelar</button>
                </form> <!--Fin del formulario-->
             </div> <!--Fin del div class = product-order-agile-->
             <!-- copyright -->

@@ -19,6 +19,16 @@
     <script>
         addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); }
     </script>
+    <script type="text/javascript">
+    function confCancel(){
+        var respuesta = confirm("Estas seguro que deseas Cancelar?");
+        if (respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }</script>
     <!-- Meta tags -->
     <!-- font-awesome icons -->
     <link href="{% static 'clienteapp/registrarcliente/css/font-awesome.min.css'%}" rel="stylesheet">
@@ -97,7 +107,7 @@
                 <div class="form-left-to-w3l ">
                     <button type="submit" class="btnn">Guardar</button>
                     <a href="{% url 'login' %}">
-                    <button type="submit" class="btnn">Cancelar </button>
+                    <button type="submit" class="btnn" onClick = 'return confCancel()'>Cancelar </button>
                 </div>
             </div>
         </form>
