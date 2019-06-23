@@ -31,19 +31,11 @@
 	<div class="porduct-order-agile">
 
 		<div style="text-align:center;">
-			<h2 class="error">Administrar Vehiculo</h2>
+			<h2 class="error">Resultado Administrar Vehiculo</h2>
 		</div>
 
 		{% csrf_token %}
-		<div style="text-align:center;">
-			<form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s" method="post" action="resultadoadministrarvehiculo">
-				{% csrf_token %}
-				<div class="form-group">
-					<input type="text" class="form-control" name="buscalo" placeholder="Buscar">
-					<button type="submit" class="btn submit">Buscar
-					</button> </a>
-				</div>
-			</form>        
+		<div style="text-align:center;">     
 		</div>
 
 		<div class="container">
@@ -62,21 +54,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					{% if object_list %}
-					{% for list_vehiculo in object_list %}
+					{% if vehiculobusq %}
+					{% for vehiculobusq in vehiculobusq %}
 					<tr>
-						<td>{{list_vehiculo.marca_Vehiculo}}</td>
-						<td>{{list_vehiculo.tipo_Vehiculo}}</td>
-						<td>{{list_vehiculo.modelo_Vehiculo}}</td>
-						<td>{{list_vehiculo.color}}</td>
-						<td>{{list_vehiculo.estado}}</td>
+						<td>{{vehiculobusq.marca_Vehiculo}}</td>
+						<td>{{vehiculobusq.tipo_Vehiculo}}</td>
+						<td>{{vehiculobusq.modelo_Vehiculo}}</td>
+						<td>{{vehiculobusq.color}}</td>
+						<td>{{vehiculobusq.estado}}</td>
 						<td>
-							<a href="{% url 'vehiculo:editarVehiculo' list_vehiculo.id %}">
-								<button>Editar</button>
-							</a>
-							<a href="{% url 'vehiculo:eliminarVehiculo' list_vehiculo.id %}">
-								<button>Eliminar</button>
-							</a>
 							<a href="{% url 'alquiler:registrarAlquiler' %}">
 								<button>Alquilar</button>
 							</a>
@@ -86,7 +72,7 @@
 					{% endfor%}
 
 					{% else %}
-					<h2 class="error">No hay registros de vehiculos</h2>
+					<h2 class="error">No hay </h2>
 
 					{% endif %}
 
@@ -97,12 +83,6 @@
 
 	<br>
 	</br>
-	<div style="text-align:center;">
-		<div class="btnn">
-			<button type="submit" style='width:150px; heigth:50'>Agregar Vehiculo</button>
-		</div>
-
-	</div>
 </div>
 
 </body>

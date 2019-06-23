@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.generic import TemplateView
 
 from vehiculoapp.models import *
 from vehiculoapp.forms import IngresarVehiculoForm
@@ -65,3 +66,13 @@ class VehiculoEliminar(DeleteView):
 	form_class = IngresarVehiculoForm
 	template_name = 'vehiculoapp/editarvehiculo.html'
 	success_url = reverse_lazy('vehiculo:vehiculoList')
+
+
+class VehiculoBusq(TemplateView):
+	model = Vehiculo
+
+	def post(self, request, *args, **kwargs):
+		buscar= request.POST['buscalo']
+		vehiculobusq = Vehiculo.objects.filter(marca_Vehiculo__contains = buscar)
+		print(vehiculobusq)
+		return render(request, 'vehiculoapp/resultadoadministrarvehiculo.html', {'vehiculobusq':vehiculobusq})
