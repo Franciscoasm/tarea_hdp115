@@ -1,10 +1,12 @@
 from django.db import models
 
-# Create your models here.
-class cliente(models.Model):
-    nombrecliente=models.CharField(max_length=30)
-    apellidocliente=models.CharField(max_length=30)
-    fechanacimiento=models.DateTimeField()
-    direccion=models.TextField()
-    telefono=models.CharField(max_length=15) 
-    identificador=models.CharField(max_length=200) 
+from clienteapp.models import Cliente
+from vehiculoapp.models import Vehiculo
+
+class Alquiler(models.Model):
+	id_vehiculo = models.OneToOneField(Vehiculo, on_delete = models.CASCADE)
+	id_cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE)
+	fecha_alquiler = models.DateField()
+	fecha_devolucion = models.DateField()
+	total_pagar = models.DecimalField(max_digits = 5, decimal_places = 2)
+	estado_alquiler = models.TextField(max_length = 15)

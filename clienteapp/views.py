@@ -3,24 +3,16 @@ from django.http import HttpResponse
 
 from .models import Cliente
 
-from vehiculoapp.models import *
+from clienteapp.models import *
 from clienteapp.forms import ClienteForm
 
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-
 # Create your views here.
-def registrarcliente(request):
-    return render(request,"clienteapp/registrarcliente.html")
 
-def buscarcliente(request):
-    list_cliente = cliente.objects.all()
-    return render(request,"clienteapp/buscarcliente.html",{'list_cliente':list_cliente})
-
-def menucliente(request):
+def menuCliente(request):
     return render(request,"clienteapp/menucliente.html")
-
 
 
 class ClienteList(ListView):
@@ -32,16 +24,16 @@ class ClienteCrear(CreateView):
 	model = Cliente
 	form_class = ClienteForm
 	template_name = 'clienteapp/registrarcliente.html'
-	success_url = reverse_lazy('clienteList')
+	success_url = reverse_lazy('cliente:clienteList')
 
 class ClienteEditar(UpdateView):
 	model = Cliente
 	form_class = ClienteForm
 	template_name = 'clienteapp/registrarcliente.html'
-	success_url = reverse_lazy('clienteList')
+	success_url = reverse_lazy('cliente:clienteList')
 
 class ClienteEliminar(DeleteView):
 	model = Cliente
 	form_class = ClienteForm
 	template_name = 'clienteapp/editarcliente.html'
-	success_url = reverse_lazy('clienteList')
+	success_url = reverse_lazy('cliente:clienteList')

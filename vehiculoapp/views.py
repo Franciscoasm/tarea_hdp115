@@ -52,16 +52,16 @@ class VehiculoCrear(CreateView):
 	model = Vehiculo
 	form_class = IngresarVehiculoForm
 	template_name = 'vehiculoapp/registrarvehiculo.html'
-	success_url = reverse_lazy('vehiculoList')
+	success_url = reverse_lazy('vehiculo:vehiculoList')
 
 class VehiculoEditar(UpdateView):
 	model = Vehiculo
 	form_class = IngresarVehiculoForm
 	template_name = 'vehiculoapp/registrarvehiculo.html'
-	success_url = reverse_lazy('vehiculoList')
+	success_url = reverse_lazy('vehiculo:vehiculoList')
 
 class VehiculoEliminar(DeleteView):
 	model = Vehiculo
 	form_class = IngresarVehiculoForm
 	template_name = 'vehiculoapp/editarvehiculo.html'
-	success_url = reverse_lazy('vehiculoList')
+	success_url = reverse_lazy('vehiculo:vehiculoList')
