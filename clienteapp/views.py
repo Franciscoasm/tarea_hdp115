@@ -44,7 +44,7 @@ class ClienteCrear(CreateView):
 	model = Cliente
 	form_class = ClienteForm
 	template_name = 'clienteapp/registrarcliente.html'
-	success_url = reverse_lazy('cliente:clienteList')
+	success_url = reverse_lazy('login')
 
 class ClienteEditar(UpdateView):
 	model = Cliente

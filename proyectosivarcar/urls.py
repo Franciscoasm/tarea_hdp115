@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth.views import login
 from django.urls import path
 from core import views as core_views
 from clienteapp import views as clienteapp_views
@@ -28,7 +29,8 @@ urlpatterns = [
     url(r'^vehiculo/', include (('vehiculoapp.urls', 'vehiculo'), namespace = 'vehiculo')),
     url(r'^cliente/', include (('clienteapp.urls', 'cliente'), namespace = 'cliente')),
     url(r'^alquiler/', include (('core.urls', 'alquiler'), namespace = 'alquiler')),
-    path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
+    url(r'^$', login, {'template_name':'loginapp/login.html'}, name = 'login'),
+   #path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
    # path('', vehiculoapp_views.ingresarVehiculoViews, name= "ingresarVehiculoViews"),
    # path('editarVehiculoView', vehiculoapp_views.editarVehiculoViews, name= "editarVehiculoViews"),
     path('admin/', admin.site.urls),
