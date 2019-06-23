@@ -21,7 +21,7 @@ from clienteapp import views as clienteapp_views
 from vehiculoapp import views as vehiculoapp_views
 from loginapp import views as loginapp_views
 urlpatterns = [
-    path('menucliente', clienteapp_views.menucliente, name="menucliente"),
+    path('', clienteapp_views.menucliente, name="menucliente"),
     path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
     path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
     path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
@@ -32,6 +32,9 @@ urlpatterns = [
     url(r'^editarVehiculo/(?P<pk>\d+)/$', vehiculoapp_views.VehiculoEditar.as_view(), name = "editar_Vehiculo"),
     url(r'^eliminarVehiculo/(?P<pk>\d+)/$', vehiculoapp_views.VehiculoEliminar.as_view(), name = "eliminar_Vehiculo"),
     url(r'^nuevoVehiculo', vehiculoapp_views.VehiculoCrear.as_view(), name= "registrarVehiculo"),
+    url(r'^buscarCliente$', clienteapp_views.ClienteList.as_view(), name = "clienteList"),
+    url(r'^nuevoCliente$', clienteapp_views.ClienteCrear.as_view(), name = "nuevoCliente"),
+    url(r'^editarCliente/(?P<pk>\d+)/$', clienteapp_views.ClienteEditar.as_view(), name = "editar_Cliente"),
     path('buscaralquiler', core_views.buscaralquiler, name= "buscaralquiler"),
     path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
     path('registraralquiler', core_views.registraralquiler, name = "registraralquiler"),

@@ -62,15 +62,21 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for list_cliente in list_cliente %}
+				{% if object_list %}
+				{% for list_cliente in object_list %}
 			<tr>
-				<td>{{list_cliente.id}}</td>
-				<td>{{list_cliente.nombrecliente}}</td>
-				<td>{{list_cliente.apellidocliente}}</td>
+				<td>{{list_cliente.pk}}</td>
+				<td>{{list_cliente.nombre_cliente}}</td>
+				<td>{{list_cliente.apellido_cliente}}</td>
 				<td>{{list_cliente.telefono}}</td>
-				<td>{{list_cliente.identificador}}</td>
+				<td>{{list_cliente.dui}}</td>
 			</tr>
-			{% endfor%}
+				{% endfor %}
+
+				{% else %}
+					<h2 class="error">¡No hay registros de clientes!</h2>
+
+				{% endif %}
 		</tbody>
 		
 	</table>

@@ -1,17 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class cliente(models.Model):
-    ididentificador = models.CharField(max_length=100, null=True, blank=True, unique=True)
-    nombrecliente = models.CharField(max_length=30)
-    apellidocliente = models.CharField(max_length=30)
-    fechanacimiento = models.DateField()
-    direccion = models.TextField()
-    telefono = models.CharField(max_length=15) 
-    identificador = models.CharField(max_length=200) 
-
-    class Meta:
-        ordering=["-ididentificador"]
+class Cliente(models.Model):
+    nombre_cliente = models.CharField(max_length = 30)
+    apellido_cliente = models.CharField(max_length = 30)
+    fecha_nacimiento = models.DateField()
+    direccion = models.TextField(max_length = 50)
+    telefono = models.CharField(max_length=12) 
+    dui = models.CharField(max_length = 9, unique = True) 
 
     def __str__(self):
-        return self.nombrecliente
+        return '{}{}'.format(self.nombre_cliente, self.apellido_cliente)
