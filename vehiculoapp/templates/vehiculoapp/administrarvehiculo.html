@@ -35,7 +35,7 @@
 </div>
 
 
-<!---SEACH--->
+<!---SEACH--->{% csrf_token %}
  <div style="text-align:center;">
 <form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s">
                 <div class="form-group">
@@ -72,6 +72,7 @@
 				<th>Modelo</th>
 				<th>Color</th>
 				<th>Estado</th>
+				<th>Acciones</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -83,6 +84,17 @@
 				<td>{{list_vehiculo.modelo_Vehiculo}}</td>
 				<td>{{list_vehiculo.color}}</td>
 				<td>{{list_vehiculo.estado}}</td>
+				<td>
+					<a href="{% url 'vehiculo:editarVehiculo' list_vehiculo.id %}">
+						<button>Editar</button>
+					</a>
+					<a href="{% url 'vehiculo:eliminarVehiculo' list_vehiculo.id %}">
+						<button>Eliminar</button>
+					</a>
+					<a href="{% url 'alquiler:registrarAlquiler' %}">
+						<button>Alquilar</button>
+					</a>
+				</td>
 			</tr>
 
 				{% endfor%}

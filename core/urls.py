@@ -4,9 +4,9 @@ from django.urls import path
 from core.views import *
 
 urlpatterns = [
-	url(r'^menuAlquiler',menualquiler, name="menuAlquiler"),
-	url(r'^menuAdministrador$', menuadministrador, name = "menuAdministrador"),
-	url(r'^buscarAlquiler', buscaralquiler, name= "buscarAlquiler"),
-	url(r'^registrarAlquiler', registraralquiler, name = "registrarAlquiler"),
+	url(r'^menuAlquiler',menuAlquiler, name="menuAlquiler"),
+	url(r'^menuAdministrador$', menuAdministrador, name = "menuAdministrador"),
+	url(r'^buscarAlquiler', buscarAlquiler, name= "buscarAlquiler"),
+	url(r'^registrarAlquiler', SolicitudAlquiler.as_view(), name = "registrarAlquiler"),
 	url(r'^seguro', seguro, name = "seguro"),
 ]

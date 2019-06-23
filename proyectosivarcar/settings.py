@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
+from django.urls import reverse_lazy
+
 
 import os
 
@@ -127,3 +129,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = reverse_lazy('alquiler: menuAdministrador')
