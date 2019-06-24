@@ -83,7 +83,11 @@ WSGI_APPLICATION = 'proyectosivarcar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
+<<<<<<< HEAD
         'NAME': 'sivarcar',
+=======
+        'NAME': 'chernobyl1',
+>>>>>>> 152ca3c4da466fee41ad61eabfffaf65e7d0a3eb
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
