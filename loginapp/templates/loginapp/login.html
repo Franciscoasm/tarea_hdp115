@@ -35,7 +35,8 @@
 <body>		
 		<h1 class="header-w3ls">Iniciar Sesión</h1>
 			<div class="porduct-order-agile" >
-					<form action="#" method="post">
+					<form action="cliente/menuCliente" method="post">
+							{% csrf_token %}
 					   <div class="order-list">
 								<div class="form-order">
 									{% csrf_token %}

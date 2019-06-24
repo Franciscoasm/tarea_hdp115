@@ -53,6 +53,7 @@
 								<th>Apellido</th>
 								<th>Numero de Telefono</th>
 								<th>Numero de Dui</th>
+								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -64,6 +65,15 @@
 							<td>{{clientesbusq.apellido_cliente}}</td>
 							<td>{{clientesbusq.telefono}}</td>
 							<td>{{clientesbusq.dui}}</td>
+
+							<td> 
+							<a href="{% url 'alquiler:registrarAlquiler' %}">
+								<button>Alquilar</button>
+							</a>
+							<a href="{% url 'cliente:editarCliente' clientesbusq.id%}">
+								<button>Editar</button>
+							</a>
+							</td>
 						</tr>
 							{% endfor %}
 							{% else %}
