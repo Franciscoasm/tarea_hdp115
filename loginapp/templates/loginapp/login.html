@@ -32,12 +32,13 @@
 	<!-- //web-fonts -->
 </head>
 
-<body>		{% csrf_token %}
+<body>		
 		<h1 class="header-w3ls">Iniciar Sesión</h1>
 			<div class="porduct-order-agile" >
 					<form action="#" method="post">
 					   <div class="order-list">
 								<div class="form-order">
+									{% csrf_token %}
 									<h3>Nombre de usuario</h3>
 									<div class="form-left-to-w3l">				
 										<input type="text" placeholder="Nombre de usuario" name="nombre_usuario" required />

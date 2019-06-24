@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^vehiculo/', include (('vehiculoapp.urls', 'vehiculo'), namespace = 'vehiculo')),
     url(r'^cliente/', include (('clienteapp.urls', 'cliente'), namespace = 'cliente')),
     url(r'^alquiler/', include (('core.urls', 'alquiler'), namespace = 'alquiler')),
+    url(r'^usuario/', include(('loginapp.urls', 'registrar'), namespace = 'registrar')),
     url(r'^$', login, {'template_name':'loginapp/login.html'}, name = 'login'),
    #path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
    # path('', vehiculoapp_views.ingresarVehiculoViews, name= "ingresarVehiculoViews"),
