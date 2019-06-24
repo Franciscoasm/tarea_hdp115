@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'proyectosivarcar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
-        'NAME': 'heroman4',
+        'NAME': 'sivarcar',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
-        'PORT': '3306'
+        'PORT': '33065'
     }
 }
 
