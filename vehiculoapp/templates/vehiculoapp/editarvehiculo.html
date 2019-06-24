@@ -17,6 +17,16 @@
          	window.scrollTo(0, 1);
          }
       </script>
+      <script type="text/javascript">
+         function confCancel(){
+             var respuesta = confirm("Estas seguro que deseas Cancelar?");
+             if (respuesta == true){
+                 return true;
+             }
+             else{
+                 return false;
+             }
+         }</script>
       <!-- Meta tag Keywords -->
       <!-- css files -->
       <link rel="stylesheet" href="{% static 'vehiculoapp/editarvehiculo/css/registrarVehiculo.css'%}" type="text/css" media="all" />
@@ -99,9 +109,17 @@
                      </table>
                   </div> <!--Fin del div class = order-list-->
                   <!--Botones-->
-                  <button type="submit" class="btn btn-primary">Eliminar</button>
-                  <button type="submit" class="btn btn-primary">Cancelar</button>
-               </form> <!--Fin del formulario-->
+                  <button type="submit" class="btnn">Eliminar</button>
+
+               </form> 
+               
+               <form method="post"> 
+                     {% csrf_token %}
+                  <button type="submit" class="btnn" onClick = 'return confCancel()'>Cancelar</button>
+               </form> 
+               
+               
+               <!--Fin del formulario-->
             </div> <!--Fin del div class = product-order-agile-->
       <!-- copyright -->
       <div class="copy">
