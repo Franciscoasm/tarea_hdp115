@@ -63,12 +63,6 @@
 						<td>{{vehiculobusq.color}}</td>
 						<td>{{vehiculobusq.estado}}</td>
 						<td>
-							<a href="{% url 'vehiculo:editarVehiculo' vehiculobusq.id %}">
-								<button>Editar</button>
-							</a>
-							<a href="{% url 'vehiculo:eliminarVehiculo' vehiculobusq.id %}">
-								<button>Eliminar</button>
-							</a>
 							<a href="{% url 'alquiler:registrarAlquiler' %}">
 								<button>Alquilar</button>
 							</a>

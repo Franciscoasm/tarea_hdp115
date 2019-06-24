@@ -13,9 +13,6 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 def devoluciondevehiculo(request):
     return render(request,"vehiculoapp/devoluciondevehiculo.html")
 
-def administrarvehiculo(request):
-	list_vehiculo = Vehiculo.objects.all()
-	return render(request, "vehiculoapp/administrarvehiculo.html",{'list_vehiculo':list_vehiculo})
 
 def editarvehiculo(request):
 	return render(request, "vehiculoapp/editarvehiculo.html")
@@ -48,6 +45,10 @@ class VehiculoList(ListView):
 	model = Vehiculo
 	template_name = 'vehiculoapp/administrarvehiculo.html'
 
+class VehiculoList2(ListView):
+	model = Vehiculo
+	template_name = 'vehiculoapp/administrarvehiculocliente.html'
+
 class VehiculoCrear(CreateView):
 	"""docstring for VehiculoCrear"""
 	model = Vehiculo
@@ -76,3 +77,12 @@ class VehiculoBusq(TemplateView):
 		vehiculobusq = Vehiculo.objects.filter(marca_Vehiculo__contains = buscar)
 		print(vehiculobusq)
 		return render(request, 'vehiculoapp/resultadoadministrarvehiculo.html', {'vehiculobusq':vehiculobusq})
+
+class VehiculoBusqCliente(TemplateView):
+	model = Vehiculo
+
+	def post(self, request, *args, **kwargs):
+		buscar= request.POST['buscalo']
+		vehiculobusq = Vehiculo.objects.filter(marca_Vehiculo__contains = buscar)
+		print(vehiculobusq)
+		return render(request, 'vehiculoapp/resultadoadministrarvehiculocliente.html', {'vehiculobusq':vehiculobusq})
