@@ -7,7 +7,6 @@ from vehiculoapp.views import VehiculoEditar
 from .forms import *
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-from .forms import AlquilerForm
 
 
 # Create your views here.
@@ -31,8 +30,8 @@ def menuAlquiler(request):
 
 class AlquilerCreateView(CreateView):
 	model = Alquiler
-    form_class = AlquilerForm
-    template_name = 'core/registraralquiler.html'
+	form_class = AlquilerForm
+	template_name = 'core/registraralquiler.html'
 	success_url = reverse_lazy('alquiler:buscarAlquiler')
 
 

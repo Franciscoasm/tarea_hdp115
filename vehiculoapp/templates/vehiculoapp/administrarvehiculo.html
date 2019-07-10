@@ -34,8 +34,10 @@
 			<h2 class="error">Administrar Vehiculo</h2>
 		</div>
 
+		{% csrf_token %}
 		<div style="text-align:center;">
 			<form class="navbar-form navbar-right search-box wow fadeInDown animated" data-wow-delay=".5s" method="post" action="resultadoadministrarvehiculo">
+				{% csrf_token %}
 				<div class="form-group">
 					<input type="text" class="form-control" name="buscalo" placeholder="Buscar">
 					<button type="submit" class="btn submit">Buscar
@@ -60,7 +62,6 @@
 					</tr>
 				</thead>
 				<tbody>
-					{% csrf_token %}
 					{% if object_list %}
 					{% for list_vehiculo in object_list %}
 					<tr>
