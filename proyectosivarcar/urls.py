@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.contrib.auth.views import login
+from django.contrib.auth import login
+from django.contrib.auth.views import LoginView, LogoutView, login
 from django.urls import path
 from core import views as core_views
 from clienteapp import views as clienteapp_views
@@ -24,13 +25,15 @@ from loginapp import views as loginapp_views
 urlpatterns = [
     #path('buscarcliente', clienteapp_views.buscarcliente, name="buscarcliente"),
     #path('registrarcliente', clienteapp_views.registrarcliente, name="registrarcliente"),
-    path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
-    path('login', loginapp_views.login, name= "login"),
+    #path('devoluciondevehiculo', vehiculoapp_views.devoluciondevehiculo, name="devoluciondevehiculo"),
+    #path('login', loginapp_views.login, name= "login"),
     url(r'^vehiculo/', include (('vehiculoapp.urls', 'vehiculo'), namespace = 'vehiculo')),
     url(r'^cliente/', include (('clienteapp.urls', 'cliente'), namespace = 'cliente')),
     url(r'^alquiler/', include (('core.urls', 'alquiler'), namespace = 'alquiler')),
-    url(r'^usuario/', include(('loginapp.urls', 'registrar'), namespace = 'registrar')),
-    url(r'^$', login, {'template_name':'loginapp/login.html'}, name = 'login'),
+    url(r'^login/', include(('loginapp.urls', 'login'), namespace = 'login')),
+    #url(r'^$', login, {'template_name':'loginapp/login.html'}, name = 'login'),
+    url(r'^$', LoginView.as_view(template_name = 'loginapp/login.html'), name = 'login'),
+    #url(r'^$', LogoutView.as_view(template_name = 'loginapp/login.html'), name = 'logout'),
    #path('editarvehiculo', vehiculoapp_views.editarvehiculo, name = "editarvehiculo"),
    # path('', vehiculoapp_views.ingresarVehiculoViews, name= "ingresarVehiculoViews"),
    # path('editarVehiculoView', vehiculoapp_views.editarVehiculoViews, name= "editarVehiculoViews"),

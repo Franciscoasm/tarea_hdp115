@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
-        'PORT': '33065'
+        'PORT': '3306'
     }
 }
 
@@ -129,4 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL = reverse_lazy('alquiler: menuAdministrador')
+
+LOGIN_REDIRECT_URL = reverse_lazy('alquiler:menuAdministrador')
+LOGOUT_REDIRECT_URL = '/login/'

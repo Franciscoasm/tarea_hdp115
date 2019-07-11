@@ -33,9 +33,9 @@
 </head>
 
 <body>		
-		<h1 class="header-w3ls">Iniciar Sesión</h1>
+		<h1 class="header-w3ls">Registrar Usuario</h1>
 			<div class="porduct-order-agile" >
-					<form action="" method="post">
+					<form method="post">
 					   <div class="order-list">
 								<div class="form-order">
 									{% csrf_token %}
@@ -43,15 +43,28 @@
 									<div class="form-left-to-w3l">				
 										<input type="text" placeholder="Nombre de usuario" name="username" required />
 									</div>
+									<h3>Nombre</h3>
+									<div class="form-left-to-w3l">				
+										<input type="text" placeholder="Nombre" name="first_name" required />
+									</div>
+									<h3>Apellidos</h3>
+									<div class="form-left-to-w3l">				
+										<input type="text" placeholder="Apellidos" name="last_name" required />
+									</div>
+									<h3>Email</h3>
+									<div class="form-left-to-w3l">				
+										<input type="text" placeholder="Email" name="email" required />
+									</div>
 									<h3>Contraseña</h3>
 									<div class="form-left-to-w3l">
-										<input type="password" placeholder="Contraseña" name="password" required />
+										<input type="password" placeholder="********" name="password1" required />
+									</div>
+									<h3>Confirmar contraseña</h3>
+									<div class="form-left-to-w3l">
+										<input type="password" placeholder="********" name="password2" required />
 									</div>
 									<div class="main">
-											<button type="submit" class="btn submit">Iniciar Sesión</button>
-											<a href="{% url 'login:registrar' %}">
-													<button type="submit" class="btn submit">Registrar Cliente</button>
-											</a>
+											<button type="submit" class="btn submit">Registrar Usuario</button></a>
 									</div>
 								</div>
 						</div>

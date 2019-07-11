@@ -7,9 +7,13 @@ class RegistroForm(UserCreationForm):
 
 		fields = [
 			'username',
+			'first_name',
+			'last_name',
 			'email',
 		]
 		lables = {
 			'username': 'Nombre de usuario',
+			'first_name': 'Nombre',
+			'last_name': 'Apellidos',
 		 	'email': 'Email',
 		}
