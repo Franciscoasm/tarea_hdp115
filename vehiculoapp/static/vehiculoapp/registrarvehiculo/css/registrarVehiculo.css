@@ -235,7 +235,9 @@ margin: 0em auto;
 box-shadow: -2px 7px 37px 8px rgba(0,0,0,0.52);
 background: #fff;
 }
-.form-group input[type="text"],.form-left-to-w3l input[type="password"],.form-left-to-w3l input[type="text"],select.form-control,.form-group textarea{
+.form-group input[type="text"],.form-left-to-w3l input[type="password"],
+.form-left-to-w3l input[type="number"],.form-left-to-w3l input[type="month"],
+.form-left-to-w3l input[type="text"],select.form-control,.form-group textarea{
 width: 100%;
 color: #000;
 outline: none;

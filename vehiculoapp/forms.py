@@ -1,5 +1,6 @@
 from django import forms
 from vehiculoapp.models import Vehiculo #importacion del modelo
+from django.core.exceptions import ValidationError
 
 class IngresarVehiculoForm(forms.ModelForm):
 
@@ -42,15 +43,15 @@ class IngresarVehiculoForm(forms.ModelForm):
 			'marca_Vehiculo': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'tipo_Vehiculo': forms.Select(attrs={'class':'form-control buttom'}),
 			'tipo_Transmicion': forms.Select(attrs={'class':'form-control buttom'}),
-			'anio': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
-			'numero_puertas': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
+			'anio': forms.TextInput(attrs={'class':'form-left-to-w3l','type':'number','min':'2005', 'max':'2020'}),
+			'numero_puertas': forms.TextInput(attrs={'class':'form-left-to-w3l','type':'number','min':'0', 'max':'5'}),
 			'modelo_Vehiculo': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'color': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
-			'capacidad_personas': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
-			'capacidad_maletero': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
-			'placa': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
+			'capacidad_personas': forms.TextInput(attrs={'class':'form-left-to-w3l', 'type':'number','min':'4', 'max':'30'}),
+			'capacidad_maletero': forms.TextInput(attrs={'class':'form-left-to-w3l', 'type':'number','min':'30', 'max':'1000'}),
+			'placa': forms.TextInput(attrs={'class':'form-left-to-w3l', 'type':'text', 'maxlength':'7', 'minlength':'7'}),
 			'tipo_Combustible': forms.Select(attrs={'class':'form-control buttom'}),
-			'precio': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
+			'precio': forms.TextInput(attrs={'class':'form-left-to-w3l', 'min':'15'}),
 			'funciones': forms.Textarea(attrs={'class':'form-group'}),
 			'estado': forms.Select(attrs={'class':'form-control buttom'}),
 		}
