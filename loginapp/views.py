@@ -14,24 +14,24 @@ def logout_request(request):
 	return redirect("/")
 
 #Creo que no es necesario esto
-def login_request(request):
-	if request.method == "POST":
-		form = AuthenticationForm(request, data=request.POST)
-		if form.is_valid():
-			username = form.cleaned_data.get('username')
-			password = form.cleaned_data.get('password')
-			user = authenticate(username = username, password = password)
-			if user is not None:
-				login(request, user)
-				messages.info(request, f'Has iniciado sesion como {username}')
-				return redirect('alquiler:menuAdministrador')
-			else:
-				messages.error(request, "Usuario o contraseña invalidos")
-		else:
-			messages.error(request, "Usuario o contraseña invalidos")
+#def login_request(request):
+	#if request.method == "POST":
+	#	form = AuthenticationForm(request, data=request.POST)
+	#	if form.is_valid():
+	#		username = form.cleaned_data.get('username')
+	#		password = form.cleaned_data.get('password')
+		#	user = authenticate(username = username, password = password)
+		#	if user is not None:
+		#		login(request, user)
+		#		messages.info(request, f'Has iniciado sesion como {username}')
+		#		return redirect('alquiler:menuAdministrador')
+		#	else:
+			#	messages.error(request, "Usuario o contraseña invalidos")
+		#else:
+		#	messages.error(request, "Usuario o contraseña invalidos")
 
-	form = AuthenticationForm()
-	return render(request, "loginapp/login.html", {"form":form})
+#	form = AuthenticationForm()
+#	return render(request, "loginapp/login.html", {"form":form})
 
 #Esto si es necesario
 class RegistroUsuario(CreateView):

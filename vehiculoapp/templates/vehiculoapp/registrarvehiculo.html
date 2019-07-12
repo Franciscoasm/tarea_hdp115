@@ -72,14 +72,16 @@
                         </div>
                         <div class="form-left-to-w3l">
                            <p>Año</p> 
-                           {{form.anio}} <!--Año de vehiculo-->
+                           <input type="month" name="mes" min="2001-01" max="2019-30"><!--Año de vehiculo-->
+                          <!-- {{form.anio}} -->
                         </div>
                      </div>
 
                      <div class="main">
                         <div class="form-left-to-w3l">
                            <p>Número de puertas</p>
-                           {{form.numero_puertas}} <!--Numero de puertas-->
+                            <input type="number" name="numero" min="0" max="5" ><!--Numero de puertas-->
+                         <!--  {{form.numero_puertas}} Numero de puertas-->
                         </div>
                         <div class="form-left-to-w3l">
                            <p>Modelo</p>
@@ -94,7 +96,8 @@
                         </div>
                         <div class="form-left-to-w3l">
                            <p>Capacidad de personas</p>
-                           {{form.capacidad_personas}} <!--Capacidad de personas-->
+                           <input type="number" name="numero" min="1" max="30" > <!--Capacidad de personas-->
+                         <!--  {{form.capacidad_personas}} -->
                            <div class="clear"></div>
                         </div>
                      </div>
@@ -102,7 +105,8 @@
                      <div class="main">
                         <div class="form-left-to-w3l">
                            <p>Capacidad de maletero (litros)</p>
-                           {{form.capacidad_maletero}} <!--Capacidad del maletero-->
+                           <input type="number" name="numero" min="1" max="1000" > <!--Capacidad del maletero-->
+                          <!-- {{form.capacidad_maletero}} -->
                            <div class="clear"></div>
                         </div>
                         <div class="form-left-to-w3l">
@@ -119,7 +123,8 @@
                         </div>
                         <div class="form-left-to-w3l">
                            <p>Precio diario ($)</p>
-                           {{form.precio}} <!--Precio diario del alquiler-->
+                           <input type="number" name="numero" value="25.00" min="25.00" > <!--Precio diario del alquiler-->
+                         <!--  {{form.precio}} -->
                            <div class="clear"></div>
                         </div>
                      </div>

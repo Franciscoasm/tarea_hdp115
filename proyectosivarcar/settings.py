@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'proyectosivarcar.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql_cymysql',
-        'NAME': 'tarea_hdp',
+        'NAME': 'tarea_hdp2',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
