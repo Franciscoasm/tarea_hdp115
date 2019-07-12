@@ -34,7 +34,7 @@ class ClienteForm(forms.ModelForm):
     		'apellido_cliente': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Apellidos'}),
     		'fecha_nacimiento': forms.TextInput(attrs={'type': 'date','class':'form-left-to-w3l'}),
     		'direccion': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Direccion'}),
-    		'telefono': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Telefono'}),
-    		'dui': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Dui'}),
+    		'telefono': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Telefono', 'type':'text', 'maxlength':'11', 'minlength':'8'}),
+    		'dui': forms.TextInput(attrs={'class':'form-left-to-w3l', 'placeholder':'Dui', 'type':'text', 'maxlength':'9','minlength':'9'}),
     		'password': forms.TextInput(attrs={'type': 'password','class':'form-left-to-w3l', 'placeholder':'Password'}),
 		}

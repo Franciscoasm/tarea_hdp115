@@ -55,15 +55,14 @@
 						{% if alquilerbusq  %}
 						{% for alquilerbusq  in alquilerbusq  %}
 						<tr>
-							<td>{{alquilerbusq.id_cliente.nombre_cliente}}</td>
-							<td>{{alquilerbusq.id_vehiculo.marca_Vehiculo}}</td>
-							<td>{{alquilerbusq.id_vehiculo.placa}}</td>
+							<td>{{alquilerbusq.nombre_cliente}}</td>
+							<td>{{alquilerbusq.marca_Vehiculo}}</td>
+							<td>{{alquilerbusq.placa}}</td>
 							<td>{{alquilerbusq.fecha_devolucion}}</td>
 						</tr>
 							{% endfor %}
 							{% else %}
 							<h2 class="error">¡No hay registros de alquileres!</h2>
-
 							{% endif %}
 					</tbody>
 				</div>

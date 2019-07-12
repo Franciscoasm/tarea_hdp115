@@ -56,6 +56,7 @@
 			
 		</div>
 
+
 		<div class="container">
 
 			<div id="cuadro">
@@ -70,12 +71,19 @@
 						</tr>
 					</thead>
 					<tbody>
+						{% if alquilerbusq %}
+						{% for alquilerbusq  in alquilerbusq  %}
 						<tr>
-							<td>Cell 1</td>
-							<td>Cell 2</td>
-							<td>Cell 3</td>
-							<td>Cell 4</td>
+							<td>{{alquilerbusq.id_cliente.nombre_cliente}}</td>
+							<td>{{alquilerbusq.id_vehiculo.marca_Vehiculo}}</td>
+							<td>{{alquilerbusq.id_vehiculo.placa}}</td>
+							<td>{{alquilerbusq.fecha_devolucion}}</td>
 						</tr>
+							{% endfor %}
+							{% else %}
+							<h2 class="error"></h2>
+
+							{% endif %}
 					</tbody>
 				</div>
 			</table>

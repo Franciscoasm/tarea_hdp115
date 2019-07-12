@@ -8,8 +8,8 @@ class Cliente(models.Model):
     apellido_cliente = models.CharField(max_length = 30)
     fecha_nacimiento = models.DateField()
     direccion = models.TextField(max_length = 50)
-    telefono = models.CharField(max_length=12) 
-    dui = models.CharField(max_length = 9, unique = True)
+    telefono = models.PositiveIntegerField() 
+    dui = models.PositiveIntegerField(max_length = 9, unique = True)
     password = models.TextField(max_length = 15)
 
     def __str__(self):

@@ -1,6 +1,10 @@
 from django import forms
 from vehiculoapp.models import Vehiculo #importacion del modelo
-from django.core.exceptions import ValidationError
+from django.core import validators
+
+def check_for_name(value):
+	if value.isalpha():
+		raise forms.ValidationError('El nombre no puede contener números')
 
 class IngresarVehiculoForm(forms.ModelForm):
 
@@ -37,14 +41,13 @@ class IngresarVehiculoForm(forms.ModelForm):
 			'tipo_Combustible': 'Tipo de combustible',
 			'precio': 'Precio diario',
 			'funciones': 'Funciones',
-			'estado': 'Estado del vehiculo',
 		}
 		widgets = {
-			'marca_Vehiculo': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
+			'marca_Vehiculo': forms.TextInput(attrs={'validators':'check_for_name','class':'form-left-to-w3l'}),
 			'tipo_Vehiculo': forms.Select(attrs={'class':'form-control buttom'}),
 			'tipo_Transmicion': forms.Select(attrs={'class':'form-control buttom'}),
 			'anio': forms.TextInput(attrs={'class':'form-left-to-w3l','type':'number','min':'2005', 'max':'2020'}),
-			'numero_puertas': forms.TextInput(attrs={'class':'form-left-to-w3l','type':'number','min':'0', 'max':'5'}),
+			'numero_puertas': forms.TextInput(attrs={'class':'form-left-to-w3l','type':'number','min':'1', 'max':'5'}),
 			'modelo_Vehiculo': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'color': forms.TextInput(attrs={'class':'form-left-to-w3l'}),
 			'capacidad_personas': forms.TextInput(attrs={'class':'form-left-to-w3l', 'type':'number','min':'4', 'max':'30'}),
